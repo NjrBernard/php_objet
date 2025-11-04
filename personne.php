@@ -45,7 +45,7 @@ class voitureVIP extends Voiture{
     }
 
     public function afficheRoues() {
-        echo $this->roues . "<br>";
+        echo "Nombre de roues: " . $this->roues . "<br>";
     }
 }
 
