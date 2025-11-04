@@ -44,4 +44,5 @@ $voiture2 -> afficheCarat();
 
 
 
+
 ?>
