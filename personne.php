@@ -26,7 +26,7 @@ class Voiture
 
     public function afficheCarat()
     {
-        echo "Marque: " . $this->marque . "<br>Couleur: " . $this->couleur . "<br>Annee: " . $this->annee . "<br><br>";
+        echo "Marque: " . $this->marque . "<br>Couleur: " . $this->couleur . "<br>Annee: " . $this->annee . "<br>";
 
     }
 
@@ -36,13 +36,28 @@ class Voiture
         $this->annee = $annee;
     }
 }
+
+class voitureVIP extends Voiture{
+    public $roues;
+    public function __construct($marque, $couleur, $annee, $roues) {
+        parent::__construct($marque, $couleur, $annee);
+        $this->roues = $roues;
+    }
+
+    public function afficheRoues() {
+        echo $this->roues . "<br>";
+    }
+}
+
 $voiture1 = new Voiture("Ferrari", "Rouge", 2025);
 $voiture1 -> afficheCarat();
+echo "<br><br>";
 
 $voiture2 = new Voiture("Mercedes", "Grise", 2024);
 $voiture2 -> afficheCarat();
+echo "<br><br>";
 
-
-
-
+$voiture3 = new voitureVIP("BMW", "Bleue", 2025, 6);
+$voiture3 -> afficheCarat();
+$voiture3 -> afficheRoues();
 ?>
