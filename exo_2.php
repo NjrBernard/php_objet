@@ -20,8 +20,8 @@ foreach ($tableauAges as $age) {
     }
 }
 
-    echo "L'année la plus ancienne est: " . "<b>" . $ageMaxi . "</b>" . "<br>";
-    echo "L'année la plus récente est: " . "<b>" . $ageMini . "</b>" . "<br><br>";
+    echo "L'année la plus récente est: " . "<b>" . $ageMaxi . "</b>" . "<br>";
+    echo "L'année la plus ancienne est: " . "<b>" . $ageMini . "</b>" . "<br><br>";
     echo "Le nombre d'années pairs est: " . "<b>" . $anneePair . "</b>" . "<br><br>";
 
 echo "<u>Avec la boucle for:</u> <br><br>";
@@ -36,8 +36,8 @@ for ($i=0; $i < count($tableauAges); $i++) {
 
 }
 
-echo "L'année la plus ancienne est: " . "<b>" . $ageMaxi . "</b>" . "<br>";
-echo "L'année la plus récente est: " . "<b>" . $ageMini . "</b>" . "<br><br>";
+echo "L'année la plus récente est: " . "<b>" . $ageMaxi . "</b>" . "<br>";
+echo "L'année la plus ancienne est: " . "<b>" . $ageMini . "</b>" . "<br><br>";
 echo "Le nombre d'années pairs est: " . "<b>" . $anneePair . "</b>" . "<br><br>";}
 
 else {echo "Tableau vide";}
