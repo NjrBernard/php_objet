@@ -1,10 +1,13 @@
 <?php
 
+// Définition de la classe country
 class country {
     public $name;
     public $capital;
     public $population; /*en millions d'habitants*/
     public $continent;
+
+    //Le constructeur de country
 
     public function __construct($name, $capital, $population, $continent) {
         $this->name = $name;
@@ -12,12 +15,12 @@ class country {
         $this->population = $population;
         $this->continent = $continent;
     }
-
+//Le getInfo initial
     public function getInfo() :void {
         echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent: " .  $this->continent ;
     }
 
-    //Mes getters
+//Mes getters
     public function getName() {
         return $this->name;
     }
@@ -52,23 +55,18 @@ class country {
         switch ($this->continent) {
             case "Europe":
                 echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent européen";
-                //$this->continent = "européen";
                 break;
             case "Amérique du Nord":
                 echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent nord-américain";
-                //$this->continent = "nord-américain";
                 break;
             case "Amérique du Sud":
                 echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent sud-américain";
-                //$this->continent = "sud-américain";
                 break;
             case "Asie":
                 echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent asiatique";
-                //$this->continent = "asiatique";
                 break;
             case "Afrique":
                 echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent africain";
-                //$this->continent = "africain";
                 break;
         }
 
