@@ -2,6 +2,7 @@
 require_once "guerrier.php";
 require_once "mage.php";
 require_once "archer.php";
+require_once "combat.php";
 
 //Création de 3 personnages, et les affiche
 
@@ -19,8 +20,9 @@ $archer1->afficheArcher();
 
 
 // Test d'une attaque d'un archer sur un mage
-
+echo "Test attaque<br><br>";
 $archer1->attaquer($mage1);
 $mage1->afficheMage();
+
 
 

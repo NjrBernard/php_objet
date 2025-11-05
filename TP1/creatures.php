@@ -27,7 +27,10 @@ class Creature
     }
 
     public function estEnVie() {
-        $this->sante > 0 ? "true" : "false";
+        if ($this->sante > 0) {
+            return true;
+        }
+        return false;
     }
 
 }

@@ -4,19 +4,21 @@ require_once "liste_persos.php";
 class Arene
 {
 
-public function lancerCombat($p1,$p2){
-while ($p1->estEnVie() && $p2->estEnVie()){
-    $p1->attaquer($p2);
-    $p2->afficheMage();
-        if (!$p2->estEnVie()){
-            echo "Victoire de P1";}
-        else {
-        $p2->attaquer($p1);
-        $p1->afficheArcher();
-        if (!$p1->estEnVie()) {
-            echo "Victoire de P2";
-        }}}}}
+    public function lancerCombat($p1, $p2)
+    {
+    if ($p1->estEnVie()) {
+        $p1->attaquer($p2);
+        if ($p2->estEnVie()) {
+            $p2->afficheMage();
+        }
+        else {echo "P2 est mort";}
+    }
+    }
+}
 
+
+
+echo "Test programme <br><br>";
 $combat = new Arene();
 $combat->lancerCombat($archer1, $mage1);
 
