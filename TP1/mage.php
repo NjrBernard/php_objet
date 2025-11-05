@@ -20,7 +20,7 @@ class Mage extends Creature
         $this->cri = "Abracadabra !";
     }
 
-    public function afficheMage()
+    public function affichePerso()
     {
         echo "<strong>Nom: </strong>" . $this->nom . "<br>"
             . "<strong>Sante: </strong>" . $this->sante . "<br>"

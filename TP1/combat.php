@@ -9,33 +9,33 @@ class Arene
         while ($p1->estEnVie() && $p2->estEnVie()) {
             echo "<strong>Joueur 1 attaque </strong><br><br>";
             $p1->attaquer($p2);
-            $p2->afficheMage();
+            $p2->affichePerso();
             if (!$p2->estEnVie()) {
-                echo "P2 est mort, Victoire Joueur 1";break;
-            }
-            else {
+                echo "P2 est mort, Victoire de " . $p1->nom . ", " . $p1->cri;
+                break;
+            } else {
                 echo "<strong>Joueur 2 attaque</strong> <br><br>";
                 $p2->attaquer($p1);
-                $p1->afficheArcher();
+                $p1->affichePerso();
                 if (!$p1->estEnVie()) {
-                    echo "P1 est mort, Victoire Joueur 2";break;
+                    echo "P1 est mort, Victoire de " . $p2->nom . ", " . $p2->cri;
+                    break;
                 }
             }
         }
 
-    }
-}
+    }}
 
 
 
 echo "Combat 1 <br><br>";
 echo "<i>Joueur 1 </i>   <br><br>";
-echo $archer1->afficheArcher();
+echo $archer1->affichePerso();
 echo "<i>Joueur 2 </i><br><br>";
-echo $mage1->afficheMage();
+echo $mage1->affichePerso();
 $combat = new Arene();
-$combat->lancerCombat($archer1, $mage1);
-echo "<br><br>" . $mage1->nom . " :" . "<strong>" . $mage1->cri . "</strong>";
+$combat->lancerCombat($archer1, $guerrier1);
+
 
 
 

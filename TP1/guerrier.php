@@ -17,7 +17,7 @@ class Guerrier extends Creature {
         $this->cri = "Pour la gloire !";
     }
 
-    public function afficheGuerrier() {
+    public function affichePerso() {
         echo "<strong>Nom: </strong>".$this->nom."<br>"
             ."<strong>Sante: </strong>".$this->sante."<br>"
             ."<strong>Force: </strong>".$this->force."<br>"

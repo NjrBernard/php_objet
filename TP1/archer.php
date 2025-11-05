@@ -20,7 +20,7 @@ class Archer extends Creature
         $this->cri = "Prêt à viser !";
     }
 
-    public function afficheArcher()
+    public function affichePerso()
     {
         echo "<strong>Nom: </strong>" . $this->nom . "<br>"
             . "<strong>Sante: </strong>" . $this->sante . "<br>"
