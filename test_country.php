@@ -60,9 +60,14 @@ echo "<table>
 <th>Population</th>
 <th>Continent</th>
 </tr>";
+
+
+function afficheDev($tableau) :void{
+    $i2=1;
 foreach ($tableau as $country) {
     if ($country->population >= 100) {
         echo "<tr><td>" . "Pays " . $i2 . ": " . "</td><td>" . $country->name . "</td><td>" . $country->population . "</td><td>" . $country->continent . "</td></tr><br>";
         $i2++;
     }
-}
+}}
+echo afficheDev($tableau);

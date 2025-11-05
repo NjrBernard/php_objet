@@ -15,6 +15,9 @@ class country {
         $this->population = $population;
         $this->continent = $continent;
     }
+
+
+
 //Le getInfo initial
     public function getInfo() :void {
         echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent: " .  $this->continent ;
@@ -50,6 +53,7 @@ class country {
         /*echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . ($this->population + 10) . " millions d'habitants. Il se situe sur le continent: " .  $this->continent . ".";*/
     }
 
+
     public function afficheContinent() :void
     {
         switch ($this->continent) {
@@ -77,25 +81,30 @@ class country {
 
 }
 
-class DevelopedCountry extends country {
+class DevelopedCountry extends country
+{
     public $gdp;
 
-    public function __construct($name, $capital, $population, $continent, $gdp) {
+    public function __construct($name, $capital, $population, $continent, $gdp)
+    {
         parent::__construct($name, $capital, $population, $continent);
         $this->gdp = $gdp;
     }
 
-    public function afficheGdp() : void{
+    public function afficheGdp(): void
+    {
         parent::getInfo();
         echo " Son PIB est de " . $this->gdp . " Mds€";
     }
 
 // Getter
 
-    public function getGdp() {
-        return isset($this->gdp) ? "$this->gdp" :"";
+    public function getGdp()
+    {
+        return isset($this->gdp) ? "$this->gdp" : "";
     }
 }
+
 
 
 
