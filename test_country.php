@@ -24,6 +24,8 @@ $Kenya->afficheContinent();echo "<br><br>";
 
 $tableau = [$Vietnam, $Italie, $EtatsUnis, $Perou, $Suede, $Kenya];
 $i=1;
+
+
 echo "<u>Exercice 4</u><br><br>";
 echo "<i>Tableau des pays</i>";
 echo "<table>
@@ -33,7 +35,6 @@ echo "<table>
 <th>Population</th>
 <th>Continent</th>
 </tr>";
-
 foreach ($tableau as $country) {
 
     echo "<tr><td>" . "Pays " . $i . ": " . "</td><td>" . $country->name . "</td><td>" . $country->population . "</td><td>" . $country->continent . "</td></tr><br>";
@@ -43,5 +44,24 @@ echo "</table>";
 
 echo "<br><br>";
 
+echo "<u>Exercice 5</u><br><br>";
+echo "<i> Affichage avec le PIB </i><br><br>";
+$pays2->getGdp(); echo "<br><br>";
 
+$i2=1;
 
+echo "<u>Exercice 6</u><br><br>";
+echo "<i>Tableau des pays si population supérieure à 100M</i>";
+echo "<table>
+<tr>
+<th>Pays</th>
+<th>Capitale</th>
+<th>Population</th>
+<th>Continent</th>
+</tr>";
+foreach ($tableau as $country) {
+    if ($country->population >= 100) {
+        echo "<tr><td>" . "Pays " . $i2 . ": " . "</td><td>" . $country->name . "</td><td>" . $country->population . "</td><td>" . $country->continent . "</td></tr><br>";
+        $i2++;
+    }
+}

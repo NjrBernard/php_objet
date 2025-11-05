@@ -112,6 +112,3 @@ echo "<u>Exercice 2</u><br><br>";
 
 $pays2 = new DevelopedCountry("Allemagne", "Berlin", 80, "Europe", 4300);
 
-$pays2->getInfo(); echo "<br><br>";
-echo "<i> Affichage avec le PIB </i><br>";
-$pays2->getGdp(); echo "<br><br>";
