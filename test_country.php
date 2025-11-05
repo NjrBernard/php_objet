@@ -22,7 +22,7 @@ $Suede -> afficheContinent();echo "<br><br>";
 $Kenya = new Country("Kenya", "Nairobi", 30, "Afrique");
 $Kenya->afficheContinent();echo "<br><br>";
 
-$tableau = [$Vietnam, $Italie, $EtatsUnis, $Perou, $Suede, $Kenya];
+$tableau = [$Vietnam, $Italie, $EtatsUnis, $Perou, $Suede, $Kenya, $pays2];
 $i=1;
 
 
@@ -34,10 +34,11 @@ echo "<table>
 <th>Capitale</th>
 <th>Population</th>
 <th>Continent</th>
+<th>PIB</th>
 </tr>";
 foreach ($tableau as $country) {
 
-    echo "<tr><td>" . "Pays " . $i . ": " . "</td><td>" . $country->name . "</td><td>" . $country->population . "</td><td>" . $country->continent . "</td></tr><br>";
+    echo "<tr><td>" . "Pays " . $i . ": " . "</td><td>" . $country->name . "</td><td>" . $country->population . "</td><td>" . $country->continent . "</td><td>" . (isset($country->gdp)?"$country->gdp":"") . "</td></tr><br>";
     $i++;
 }
 echo "</table>";
@@ -46,7 +47,7 @@ echo "<br><br>";
 
 echo "<u>Exercice 5</u><br><br>";
 echo "<i> Affichage avec le PIB </i><br><br>";
-$pays2->getGdp(); echo "<br><br>";
+$pays2->afficheGdp(); echo "<br><br>";
 
 $i2=1;
 

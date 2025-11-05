@@ -54,19 +54,19 @@ class country {
     {
         switch ($this->continent) {
             case "Europe":
-                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent européen";
+                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent européen.";
                 break;
             case "Amérique du Nord":
-                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent nord-américain";
+                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent nord-américain.";
                 break;
             case "Amérique du Sud":
-                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent sud-américain";
+                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent sud-américain.";
                 break;
             case "Asie":
-                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent asiatique";
+                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent asiatique.";
                 break;
             case "Afrique":
-                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent africain";
+                echo "Le " . $this->name . " a pour capitale " . $this->capital . ". Sa population est de  " . $this->population . " millions d'habitants. Il se situe sur le continent africain.";
                 break;
         }
 
@@ -85,11 +85,16 @@ class DevelopedCountry extends country {
         $this->gdp = $gdp;
     }
 
-    public function getGdp() : void{
+    public function afficheGdp() : void{
         parent::getInfo();
         echo " Son PIB est de " . $this->gdp . " Mds€";
     }
 
+// Getter
+
+    public function getGdp() {
+        return isset($this->gdp) ? "$this->gdp" :"";
+    }
 }
 
 
